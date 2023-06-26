@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../Booking app/Style.css" />
+
+    <title>Adress Booking app</title>
+  </head>
+  <body>
+    <div id="fullscreen-div"></div>
+    <form id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-head">
+          <h3 id="modal-title">Add Address</h3>
+          <button type="button" id="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-main">
+          <div class="modal-row">
+            <div class="modal-col">
+              <label for=""> How you should be mail you addressed?</label>
+              <input
+                type="text"
+                placeholder="E.g the Sarkarov family"
+                class="form-control"
+                name="addr_ing_name"
+              />
+            </div>
+          </div>
+          <div class="modal-row grid-row">
+            <div class="modal-col">
+              <label for="">First name</label>
+              <input
+                type="text"
+                placeholder="The first name"
+                class="form-control"
+                name="first_name"
+              />
+            </div>
+            <div class="modal-col">
+              <label for=""> Last Name</label>
+              <input
+                type="text"
+                placeholder="the last name"
+                class="form-control"
+                name="last_name"
+              />
+            </div>
+          </div>
+          <div class="modal-row grid-row">
+            <div class="modal-col">
+              <label for="">Email</label>
+              <input
+                type="text"
+                placeholder="Email"
+                class="form-control"
+                name="email"
+              />
+            </div>
+            <div class="modal-col">
+              <label for=""> Phone</label>
+              <input
+                type="text"
+                placeholder="Phone"
+                class="form-control"
+                name="phone"
+              />
+            </div>
+          </div>
+          <div class="modal-row grid-row">
+            <div class="modal-col">
+              <label for="">Street address</label>
+              <input
+                type="text"
+                placeholder="street address , apartment , house number , etc."
+                class="form-control"
+                name="street_addr"
+              />
+            </div>
+            <div class="modal-col">
+              <label for="">Postal code</label>
+              <input
+                type="text"
+                placeholder="604567"
+                class="form-control"
+                name="postal_code"
+              />
+            </div>
+          </div>
+          <div class="modal-row grid-row">
+            <div class="modal-col">
+              <label for="">City</label>
+              <input
+                type="text"
+                placeholder="City name"
+                class="form-control"
+                name="city"
+              />
+            </div>
+            <div class="modal-col">
+              <label for="">Country</label>
+              <select id="country-list" name="country">
+                <!-- <option value="">AZE</option> -->
+              </select>
+            </div>
+          </div>
+          <div class="modal-row">
+            <div class="modal-col">
+              <label for="">labels</label>
+              <select name="labels">
+                <option value="Family">Family</option>
+                <option value="Friends">Friends</option>
+                <option value="Colleagues">Colleagues</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-row" id="modal-btns">
+            <button type="submit" id="save-btn">Save</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="addr-book" id="addr-book">
+      <div class="addr-book-content">
+        <div class="addr-book-head">
+          <i class="fa-solid fa-address-book fa-2x"></i>
+          <h2>Address<span>Book</span></h2>
+        </div>
+        <div class="addr-book-top">
+          <button type="button" class="btn" id="add-btn">
+            <span> <i class="fas fa-plus"></i>Add adrress</span>
+          </button>
+        </div>
+        <div class="address-book-list" id="addr-book-list">
+          <table class="addr-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Adrress</th>
+                <th>Labels</th>
+                <th>By name</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td>1</td>
+                <td>
+                  <span class="addressing-name">Smith's family</span>
+                  <br /><span class="address"
+                    >Jhonson Street -5668 , Lake Side</span
+                  >
+                </td>
+                <td><span>Colleagues</span></td>
+                <td>Elvin Sarkarov</td>
+                <td>123-123-1233</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="../Booking app/main.js"></script>
+  </body>
+</html>

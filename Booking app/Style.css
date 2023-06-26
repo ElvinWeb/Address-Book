@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+:root {
+  ---orange-color: #fa8e3f;
+  ---grey: #b8b7bc;
+  ---light-grey-color: #f3f5f1;
+  ---carrib-green-color: #02bfae;
+  ---dark-blue: #020125;
+}
+body {
+  min-height: 100vh;
+  background-color: var(---light-grey-color);
+}
+h1,
+h2,
+h3,
+h4 {
+  color: var(---dark-blue);
+}
+input,
+button {
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+button {
+  cursor: pointer;
+}
+/* ----------------------------------------------Modal start------------------------------------------ */
+#fullscreen-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+.modal {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: fixed;
+  display: none;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.modal-head {
+  background-color: var(---orange-color);
+  padding: 1.2rem 1.4rem;
+  font-size: 1.5rem;
+  color: #fff;
+  position: relative;
+}
+.modal-head h3 {
+  color: #fff;
+}
+#close-btn {
+  background-color: transparent;
+  font-size: 1rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: var(---grey);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+#close-btn:hover {
+  transform: scale(1.1);
+}
+.modal-main {
+  padding: 1.2rem 2.4rem 1rem 2.4rem;
+  max-height: 620px;
+  min-width: 400px;
+}
+.modal-row {
+  margin-bottom: 1.2rem;
+}
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+}
+.modal-col label {
+  display: block;
+  font-weight: 700;
+  color: var(---dark-blue);
+  margin-bottom: 0.6rem;
+}
+.modal-col input,
+.modal-col select {
+  border: 1px solid rgba(184, 183, 188, 0.5);
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: 0;
+  width: 100%;
+}
+#modal-btns button {
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.6rem 2rem;
+  transition: all 0.2s ease-in-out;
+}
+#model-btns button:hover {
+  transform: translateY(1px);
+}
+#save-btn,
+#update-btn {
+  box-shadow: 0 2px 0 0 #bd5305;
+  background-color: var(---orange-color);
+  margin-right: 0.6rem;
+}
+#save-btn:hover,
+#update-btn:hover {
+  box-shadow: 0 1px 0 0 #bd5305;
+}
+#delete-btn {
+  background-color: #d33c41;
+  box-shadow: 0 2px 0 0 #8a1f23;
+}
+#delete-btn:hover {
+  box-shadow: 0 1px 0 0 #8a1f23;
+}
+/* ----------------------------------------------Modal end------------------------------------------ */
+
+/* ----------------------------------------------Addresses start------------------------------- */
+.addr-book {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 700px;
+  padding: 1.4rem;
+}
+.addr-book-content {
+  background-color: #fff;
+  padding: 1.6rem;
+  border-radius: 5px;
+  height: 500px;
+}
+.addr-book-head {
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addr-book-head h2 {
+  font-size: 1.2rem;
+}
+.addr-book-head i {
+  color: var(---orange-color);
+  margin-right: 1rem;
+}
+.addr-book-top {
+  padding: 1rem 0;
+}
+.addr-book-top .btn {
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: var(---orange-color);
+  box-shadow: 0 2px 0 0 #bd5305;
+}
+.addr-book-top .btn:hover {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 0 #bd3503;
+}
+.addr-book-list {
+  margin: 1rem 0;
+  max-width: 450px;
+}
+.addr-table {
+  margin-top: 2rem;
+  width: 100% !important;
+
+  text-align: left;
+  border-collapse: collapse;
+}
+.addr-table thead {
+  border-bottom: 1px solid #e3e4f1;
+}
+.addr-table thead tr th {
+  padding-bottom: 0.8rem;
+}
+.addr-table tbody td {
+  padding: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+.addr-table tbody td:nth-child(1) {
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+}
+.addr-table tbody td:nth-child(2) {
+  font-weight: 800;
+}
+.addr-table .addressing-name {
+  color: var(---dark-blue);
+}
+.addr-table .address {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+.addr-table tbody td:nth-child(3) span {
+  background-color: var(---light-grey-color);
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+}
+.addr-table tbody tr {
+  cursor: pointer;
+}
+.addr-table tbody tr:hover {
+  background-color: var(---orange-color);
+  transition: all 0.3s ease;
+}
+.addr-table tbody tr:hover td,
+.addr-table tbody tr:hover span {
+  color: #fff;
+}
+.addr-table tbody tr:hover td:nth-child(3) span {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.6);
+}
+/* ----------------------------------------------Addresses end------------------------------- */
+
+/* Error message */
+.errorMsg {
+  border: 1px solid #d33c41 !important;
+}
